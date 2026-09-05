@@ -1,3 +1,5 @@
+import HeroField from "./HeroField";
+
 export default function PageHero({
   title,
   subtitle,
@@ -9,14 +11,7 @@ export default function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden bg-navy text-white">
-      <div
-        className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-brand/10 blur-3xl"
-        aria-hidden
-      />
+      <HeroField />
       <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-28">
         {breadcrumb && (
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand mb-3">

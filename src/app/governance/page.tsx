@@ -35,33 +35,6 @@ export default function Governance() {
         subtitle="Corporate facts, governance principles, and investment mandate for OneCap Investment Limited."
       />
 
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-        <ScrollReveal className="mb-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand mb-3">
-            Corporate Facts
-          </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy">
-            Registered Under the Companies and Allied Matters Act, 2020
-          </h2>
-        </ScrollReveal>
-
-        <ScrollReveal className="rounded-3xl border border-border bg-white overflow-hidden divide-y divide-border">
-          {FACTS.map((f) => (
-            <div
-              key={f.label}
-              className="grid gap-1 sm:grid-cols-[220px_1fr] sm:gap-6 px-6 py-5 sm:px-8"
-            >
-              <span className="text-sm font-semibold text-brand uppercase tracking-wide">
-                {f.label}
-              </span>
-              <span className="text-text-secondary leading-relaxed">
-                {f.value}
-              </span>
-            </div>
-          ))}
-        </ScrollReveal>
-      </section>
-
       <section className="bg-surface border-y border-border">
         <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
           <ScrollReveal className="mb-10">
@@ -152,6 +125,42 @@ export default function Governance() {
             </p>
           </div>
         </ScrollReveal>
+      </section>
+
+      <section className="bg-surface border-y border-border">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+          <ScrollReveal className="mb-10 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand mb-3">
+              At a Glance
+            </p>
+            <h2 className="text-xl sm:text-2xl font-bold text-navy">
+              Corporate Facts
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal
+            stagger={0.08}
+            className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2"
+          >
+            {FACTS.map((f, i) => (
+              <div
+                key={f.label}
+                className={`bg-white p-6 ${
+                  i === FACTS.length - 1 && FACTS.length % 2 === 1
+                    ? "sm:col-span-2"
+                    : ""
+                }`}
+              >
+                <span className="block text-xs font-semibold text-brand uppercase tracking-wide mb-1.5">
+                  {f.label}
+                </span>
+                <span className="text-sm text-text-secondary leading-relaxed">
+                  {f.value}
+                </span>
+              </div>
+            ))}
+          </ScrollReveal>
+        </div>
       </section>
 
       <JoinCta />

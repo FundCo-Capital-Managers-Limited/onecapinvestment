@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import JoinCta from "@/components/JoinCta";
+import HeroField from "@/components/HeroField";
 
 const PILLARS = [
   {
@@ -28,14 +29,7 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy text-white min-h-[80vh] flex items-center">
-        <div
-          className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute -bottom-40 left-1/4 h-96 w-96 rounded-full bg-brand/10 blur-3xl"
-          aria-hidden
-        />
+        <HeroField />
         <ScrollReveal className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand mb-5">
             OneCap Investment Limited
@@ -120,12 +114,6 @@ export default function Home() {
               a Clean Energy Fund and a Housing Solution Fund, and oversees a
               portfolio of operating companies across electric mobility,
               biogas and waste-to-energy, agriculture, and mini-grid power.
-            </p>
-            <p className="text-white/60 text-sm leading-relaxed mb-8">
-              OneCap itself is a private holding vehicle and is not a
-              regulated fund manager. FundCo Capital Managers Limited holds
-              its own regulatory status and is the entity through which these
-              activities are conducted.
             </p>
             <Link
               href="/portfolio"

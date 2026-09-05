@@ -8,10 +8,50 @@ import JoinCta from "@/components/JoinCta";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "OneCap Investment Limited's principal holding is a 92.8% equity stake in FundCo Capital Managers Limited, a Nigerian investment manager with holdings across electric mobility, biogas, agriculture, and mini-grid power.",
+    "OneCap Investment Limited's principal holding is a 92.8% equity stake in FundCo Capital Managers Limited, the SEC-authorised manager of the Housing Solution Fund and the Clean Energy Fund, with holdings across battery swapping, mini-grid power, solar, electric mobility, agriculture, and biogas.",
 };
 
+const FUNDS = [
+  {
+    name: "Clean Energy Fund",
+    logo: "/images/portfolio/cef-logo.png",
+    href: "https://cleanenergyfund.ng",
+    detail:
+      "A local-currency climate infrastructure fund, Climate Bonds Certified and rated investment grade (GCR &amp; Agusto), financing energy access, mini-grids, solar, e-mobility, and agro-processing in partnership with InfraCredit.",
+    stats: ["Climate Bonds Certified", "GCR / Agusto BBB rated"],
+  },
+  {
+    name: "Housing Solution Fund",
+    logo: "/images/portfolio/hsf-logo.png",
+    href: "https://housingsolutionfund.ng",
+    detail:
+      "Nigeria's first privately managed housing-focused REIT, financing affordable homeownership through long-dated home loans and developer offtake commitments.",
+    stats: ["10,000+ homes targeted", "SEC-registered REIT"],
+  },
+];
+
 const HOLDINGS = [
+  {
+    name: "Swap Station Mobility",
+    logo: "/images/portfolio/ssm-logo.png",
+    sector: "Battery-swap infrastructure",
+    detail:
+      "Africa's clean-energy swapping network for commercial fleets — high-availability battery-swap stations delivering zero-downtime energy for electric logistics.",
+  },
+  {
+    name: "Electrify Microgrid",
+    logo: "/images/portfolio/electrify-microgrid-logo.svg",
+    sector: "Mini-grid power",
+    detail:
+      "Develops and operates mini-grid power infrastructure, extending reliable, renewable electricity access to underserved Nigerian communities.",
+  },
+  {
+    name: "GroSolar",
+    logo: "/images/portfolio/grosolar-logo.svg",
+    sector: "Distributed solar",
+    detail:
+      "Subscription-based solar-as-a-service, removing the upfront cost barrier to distributed solar for Nigerian households and businesses.",
+  },
   {
     name: "E-Mobilite",
     logo: "/images/portfolio/e-mobilite-logo.png",
@@ -33,13 +73,6 @@ const HOLDINGS = [
     detail:
       "Agricultural production and value-chain financing platform supporting food security and rural economic activity.",
   },
-  {
-    name: "Electrify Microgrid",
-    logo: "/images/portfolio/electrify-microgrid-logo.svg",
-    sector: "Mini-grid power",
-    detail:
-      "Develops and operates mini-grid power infrastructure, extending reliable electricity access to underserved communities.",
-  },
 ];
 
 export default function Portfolio() {
@@ -48,7 +81,7 @@ export default function Portfolio() {
       <PageHero
         breadcrumb="Portfolio"
         title="Our Holdings"
-        subtitle="OneCap's capital is deployed principally through FundCo Capital Managers Limited, an investment manager whose operating platforms span energy, mobility, and agriculture."
+        subtitle="OneCap's capital is deployed principally through FundCo Capital Managers Limited, the SEC-authorised manager of two regulated funds and a portfolio of operating platforms spanning energy, mobility, and agriculture."
       />
 
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
@@ -71,12 +104,11 @@ export default function Portfolio() {
             </h2>
             <p className="text-white/75 leading-relaxed mb-4">
               FundCo is a Nigerian investment manager with a mandate aligned
-              to green and infrastructure-focused strategies. It structures
-              and manages regulated investment vehicles &mdash; including a
-              Clean Energy Fund and a Housing Solution Fund &mdash; and
-              oversees a portfolio of operating companies across electric
-              mobility, biogas and waste-to-energy, agriculture, and mini-grid
-              power.
+              to green and infrastructure-focused strategies. It is the
+              SEC-authorised fund manager for the Clean Energy Fund and the
+              Housing Solution Fund, and oversees a portfolio of operating
+              companies across battery-swap infrastructure, mini-grid power,
+              solar, electric mobility, agriculture, and biogas.
             </p>
             <p className="text-white/60 text-sm leading-relaxed">
               FundCo holds its own regulatory posture as an investment
@@ -92,43 +124,94 @@ export default function Portfolio() {
         <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
           <ScrollReveal className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand mb-3">
-              Indirect Holdings
+              Regulated Funds
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy">
-              FundCo's Portfolio Companies
+              Managed by FundCo Capital Managers Limited
             </h2>
-            <p className="mt-4 text-text-secondary leading-relaxed">
-              Through its stake in FundCo, OneCap holds an indirect interest
-              in the following operating platforms.
-            </p>
           </ScrollReveal>
 
           <ScrollReveal stagger={0.15} className="grid gap-6 sm:grid-cols-2">
-            {HOLDINGS.map((h) => (
-              <div
-                key={h.name}
-                className="rounded-3xl border border-border bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            {FUNDS.map((f) => (
+              <a
+                key={f.name}
+                href={f.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-3xl border border-border bg-white p-7 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
               >
-                <div className="h-14 mb-5 flex items-center">
+                <div className="h-12 mb-6 flex items-center">
                   <Image
-                    src={h.logo}
-                    alt={h.name}
-                    width={200}
+                    src={f.logo}
+                    alt={f.name}
+                    width={220}
                     height={80}
-                    className="h-10 w-auto object-contain"
+                    className="h-9 w-auto object-contain"
                   />
                 </div>
-                <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand mb-3 self-start">
-                  {h.sector}
+                <h3 className="text-lg font-bold text-navy mb-3">{f.name}</h3>
+                <p
+                  className="text-sm text-text-secondary leading-relaxed mb-5"
+                  dangerouslySetInnerHTML={{ __html: f.detail }}
+                />
+                <div className="mt-auto flex flex-wrap gap-2">
+                  {f.stats.map((s) => (
+                    <span
+                      key={s}
+                      className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand group-hover:gap-2 transition-all">
+                  Visit website &rarr;
                 </span>
-                <h3 className="text-lg font-bold text-navy mb-2">{h.name}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {h.detail}
-                </p>
-              </div>
+              </a>
             ))}
           </ScrollReveal>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+        <ScrollReveal className="text-center mb-14 max-w-2xl mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand mb-3">
+            Indirect Holdings
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy">
+            FundCo&rsquo;s Portfolio Companies
+          </h2>
+          <p className="mt-4 text-text-secondary leading-relaxed">
+            Through its stake in FundCo, OneCap holds an indirect interest
+            in the following operating platforms.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal stagger={0.12} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {HOLDINGS.map((h) => (
+            <div
+              key={h.name}
+              className="rounded-3xl border border-border bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div className="h-12 mb-5 flex items-center">
+                <Image
+                  src={h.logo}
+                  alt={h.name}
+                  width={200}
+                  height={80}
+                  className="h-9 w-auto object-contain"
+                />
+              </div>
+              <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand mb-3 self-start">
+                {h.sector}
+              </span>
+              <h3 className="text-lg font-bold text-navy mb-2">{h.name}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {h.detail}
+              </p>
+            </div>
+          ))}
+        </ScrollReveal>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16 sm:py-24 text-center">
@@ -140,7 +223,7 @@ export default function Portfolio() {
             Long-Term Capital, Not Short-Term Trading
           </h2>
           <p className="text-text-secondary leading-relaxed mb-8">
-            OneCap's investment horizon is structured around control and
+            OneCap&rsquo;s investment horizon is structured around control and
             majority positions in platforms with durable, infrastructure-like
             cash flows &mdash; rather than short-dated trading strategies.
             Read more about our governance and investment mandate.

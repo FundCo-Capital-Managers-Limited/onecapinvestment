@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import ScrollReveal from "@/components/ScrollReveal";
+
+const COMMITMENTS = [
+  { value: "Institutional", label: "& Press Enquiries Only" },
+  { value: "2 Days", label: "Typical Response Time" },
+  { value: "Lekki", label: "Lagos — Registered Office" },
+];
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -36,15 +43,10 @@ export default function Contact() {
           </p>
 
           <h2 className="text-lg font-semibold text-brand mb-2">Partnerships & Institutional</h2>
-          <p className="text-text-secondary mb-6">
+          <p className="text-text-secondary">
             <a href="mailto:partnerships@onecapinvestment.ng" className="hover:text-brand">
               partnerships@onecapinvestment.ng
             </a>
-          </p>
-
-          <h2 className="text-lg font-semibold text-brand mb-2">Principal Holding</h2>
-          <p className="text-text-secondary">
-            FundCo Capital Managers Limited (92.8% equity stake)
           </p>
         </div>
 
@@ -54,6 +56,22 @@ export default function Contact() {
           </p>
           <ContactForm />
         </div>
+      </section>
+
+      <section className="border-t border-border bg-surface">
+        <ScrollReveal
+          stagger={0.1}
+          className="mx-auto max-w-5xl px-6 py-12 sm:py-14 grid gap-8 sm:grid-cols-3 text-center"
+        >
+          {COMMITMENTS.map((c) => (
+            <div key={c.label}>
+              <p className="text-2xl sm:text-3xl font-bold text-navy">{c.value}</p>
+              <p className="mt-1.5 text-xs font-semibold uppercase tracking-wide text-text-secondary">
+                {c.label}
+              </p>
+            </div>
+          ))}
+        </ScrollReveal>
       </section>
     </>
   );
