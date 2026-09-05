@@ -77,6 +77,11 @@ const organizationJsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/images/onecap-logo-full.png`,
   description: siteDescription,
+  sameAs: [
+    "https://www.linkedin.com/company/onecapinvestment",
+    "https://x.com/OneCapNG",
+    "https://www.instagram.com/OneCapNG",
+  ],
   subOrganization: {
     "@type": "Organization",
     name: "FundCo Capital Managers Limited",
