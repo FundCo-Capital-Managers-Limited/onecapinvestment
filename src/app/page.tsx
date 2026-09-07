@@ -29,6 +29,14 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy text-white min-h-[80vh] flex items-center">
+        <Image
+          src="/images/lagos-skyline-dusk.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-45"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-navy/40" />
         <HeroField />
         <ScrollReveal className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand mb-5">
