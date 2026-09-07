@@ -18,12 +18,12 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/images/onecap-logo-full.png"
+            src="/images/onecap-logo-nav.png"
             alt="OneCap Investment Limited"
-            width={1535}
+            width={1647}
             height={480}
             priority
-            className="h-10 w-auto sm:h-14"
+            className="h-12 w-auto sm:h-16"
           />
         </Link>
 
