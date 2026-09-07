@@ -13,7 +13,7 @@ const inter = Inter({
 
 const siteUrl = "https://onecapinvestment.ng";
 const siteDescription =
-  "OneCap Investment Limited is a Nigerian private investment and holding company deploying proprietary capital into high-impact alternative assets, real estate infrastructure, and transition energy across Sub-Saharan Africa. Majority shareholder of FundCo Capital Managers Limited.";
+  "OneCap Investment Limited is a Nigerian private investment and holding company deploying proprietary capital into high-impact alternative assets, sustainable infrastructure, and transition energy across Sub-Saharan Africa. Majority shareholder of FundCo Capital Managers Limited.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

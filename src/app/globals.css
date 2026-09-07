@@ -4,15 +4,15 @@
   --background: #ffffff;
   --foreground: #10191f;
 
-  --color-brand: #b08d4a;
-  --color-brand-dark: #8c6f39;
-  --color-accent: #b08d4a;
-  --color-navy: #0c1a30;
+  --color-brand: #2f9e63;
+  --color-brand-dark: #1f7a4a;
+  --color-accent: #2f9e63;
+  --color-navy: #00417d;
   --color-text: #10191f;
   --color-text-secondary: #4c5b66;
   --color-surface: #f5f6f8;
   --color-border: #dde2e8;
-  --color-dark: #060e1b;
+  --color-dark: #001830;
 }
 
 @theme inline {

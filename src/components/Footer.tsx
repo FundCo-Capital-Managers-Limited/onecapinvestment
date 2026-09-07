@@ -29,13 +29,13 @@ export default function Footer() {
             alt="OneCap Investment Limited"
             width={1535}
             height={480}
-            className="h-10 w-auto"
+            className="h-14 w-auto"
           />
           <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
             A Nigerian private investment and holding company deploying
-            proprietary capital into high-impact alternative assets, real
-            estate infrastructure, and transition energy across Sub-Saharan
-            Africa.
+            proprietary capital into high-impact alternative assets,
+            sustainable infrastructure, and transition energy across
+            Sub-Saharan Africa.
           </p>
           <div className="flex gap-3 mt-6">
             {SOCIALS.map((s) => (
@@ -61,7 +61,7 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2.5 text-sm text-white/60">
             <li><Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
-            <li><Link href="/governance" className="hover:text-white transition-colors">Governance</Link></li>
+            <li><Link href="/about-us" className="hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>

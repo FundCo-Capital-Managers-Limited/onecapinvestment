@@ -8,7 +8,7 @@ import JoinCta from "@/components/JoinCta";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "OneCap Investment Limited's principal holding is a 92.8% equity stake in FundCo Capital Managers Limited, the SEC-authorised manager of the Housing Solution Fund and the Clean Energy Fund, with holdings across battery swapping, mini-grid power, solar, electric mobility, agriculture, and biogas.",
+    "OneCap Investment Limited's principal holding is a majority equity stake in FundCo Capital Managers Limited, the SEC-authorised manager of the Housing Solution Fund and the Clean Energy Fund, with holdings across battery swapping, mini-grid power, solar, electric mobility, agriculture, and biogas.",
 };
 
 const FUNDS = [
@@ -97,7 +97,7 @@ export default function Portfolio() {
           </div>
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand mb-3">
-              92.8% Equity Stake &mdash; Principal Holding
+              Majority Equity Stake &mdash; Principal Holding
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               FundCo Capital Managers Limited
@@ -226,13 +226,13 @@ export default function Portfolio() {
             OneCap&rsquo;s investment horizon is structured around control and
             majority positions in platforms with durable, infrastructure-like
             cash flows &mdash; rather than short-dated trading strategies.
-            Read more about our governance and investment mandate.
+            Read more about our company and investment mandate.
           </p>
           <Link
-            href="/governance"
+            href="/about-us"
             className="inline-block rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white transition-colors"
           >
-            Governance & Mandate
+            About Us & Mandate
           </Link>
         </ScrollReveal>
       </section>

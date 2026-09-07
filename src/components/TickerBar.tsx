@@ -1,7 +1,7 @@
 const ITEMS = [
   "RC 1767172",
   "Private Investment & Holding Company",
-  "92.8% Equity Stake in FundCo Capital Managers Limited",
+  "Majority Shareholder of FundCo Capital Managers Limited",
   "Aligned with the Clean Energy Fund & Housing Solution Fund",
   "Lekki, Lagos, Nigeria",
 ];

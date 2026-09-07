@@ -13,9 +13,9 @@ const PILLARS = [
   },
   {
     tag: "02",
-    title: "Real Estate Infrastructure",
+    title: "Sustainable Infrastructure",
     detail:
-      "Long-horizon exposure to real estate and infrastructure assets underpinning Nigeria's and West Africa's growth.",
+      "Long-horizon exposure to sustainable infrastructure assets underpinning Nigeria's growth.",
   },
   {
     tag: "03",
@@ -42,7 +42,7 @@ export default function Home() {
           <p className="mt-7 max-w-xl text-white/80 text-base sm:text-lg leading-relaxed">
             OneCap Investment Limited is a private investment and holding
             company deploying proprietary capital into high-impact
-            alternative assets, real estate infrastructure, and transition
+            alternative assets, sustainable infrastructure, and transition
             energy across Sub-Saharan Africa.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -73,9 +73,7 @@ export default function Home() {
           <p className="mt-4 text-text-secondary leading-relaxed">
             OneCap is a private, closely held investment and holding company
             incorporated in Nigeria. We deploy proprietary capital directly
-            and through majority-owned operating platforms, with a mandate
-            centred on long-term value creation across West Africa rather
-            than short-term trading gains.
+            and through majority-owned operating platforms.
           </p>
         </ScrollReveal>
 
@@ -107,7 +105,7 @@ export default function Home() {
               Major Institutional Shareholder in FundCo Capital Managers Limited
             </h2>
             <p className="text-white/75 leading-relaxed mb-6">
-              OneCap holds a 92.8% equity stake in FundCo Capital Managers
+              OneCap holds a majority equity stake in FundCo Capital Managers
               Limited, a Nigerian investment manager whose mandate is aligned
               with green and infrastructure-focused strategies. FundCo
               structures and manages regulated investment vehicles, including
@@ -130,9 +128,9 @@ export default function Home() {
               height={200}
               className="h-16 w-auto mb-6 object-contain"
             />
-            <p className="text-5xl font-bold text-brand mb-2">92.8%</p>
+            <p className="text-3xl sm:text-4xl font-bold text-brand mb-2">Majority Stake</p>
             <p className="text-sm text-white/60 uppercase tracking-wide">
-              Equity Stake Held by OneCap
+              Equity Held by OneCap
             </p>
           </div>
         </ScrollReveal>
@@ -152,10 +150,10 @@ export default function Home() {
             Companies and Allied Matters Act, 2020.
           </p>
           <Link
-            href="/governance"
+            href="/about-us"
             className="inline-block rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white transition-colors"
           >
-            Read Our Governance & Mandate
+            About Us & Mandate
           </Link>
         </ScrollReveal>
       </section>

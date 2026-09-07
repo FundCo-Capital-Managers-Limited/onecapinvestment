@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import JoinCta from "@/components/JoinCta";
 
 export const metadata: Metadata = {
-  title: "Governance",
+  title: "About Us",
   description:
     "Corporate facts, governance principles, and the investment mandate of OneCap Investment Limited (RC 1767172), a Nigerian private investment and holding company.",
 };
@@ -22,16 +22,16 @@ const FACTS = [
   { label: "Jurisdiction", value: "Federal Republic of Nigeria" },
   {
     label: "Principal Holding",
-    value: "FundCo Capital Managers Limited (92.8% equity stake)",
+    value: "FundCo Capital Managers Limited (majority equity stake)",
   },
 ];
 
-export default function Governance() {
+export default function AboutUs() {
   return (
     <>
       <PageHero
-        breadcrumb="Governance"
-        title="Governance"
+        breadcrumb="About Us"
+        title="About Us"
         subtitle="Corporate facts, governance principles, and investment mandate for OneCap Investment Limited."
       />
 
@@ -91,7 +91,7 @@ export default function Governance() {
           <div className="space-y-5 text-text-secondary leading-relaxed">
             <p>
               OneCap Investment Limited exists to deploy proprietary capital
-              into high-impact alternative assets, real estate
+              into high-impact alternative assets, sustainable
               infrastructure, and transition energy opportunities across
               Sub-Saharan Africa. As a private holding vehicle, OneCap does
               not raise capital from the public or market retail investment
@@ -99,7 +99,7 @@ export default function Governance() {
               basis, primarily through majority-owned operating platforms.
             </p>
             <p>
-              The firm's principal investment is its 92.8% equity stake in
+              The firm's principal investment is a majority equity stake in
               FundCo Capital Managers Limited, a Nigerian investment manager
               whose mandate centres on green and infrastructure-linked
               strategies. FundCo structures and manages regulated investment

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const NAV = [
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Governance", href: "/governance" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -23,7 +23,7 @@ export default function Header() {
             width={1535}
             height={480}
             priority
-            className="h-8 w-auto sm:h-9"
+            className="h-10 w-auto sm:h-14"
           />
         </Link>
 
